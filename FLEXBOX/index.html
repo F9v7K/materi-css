@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS |FLEXBOX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+        DEFINISI
+            -   model layout 1 dimensi yang dapat mengatur jarak dan penjajaran antar item dalam sebuah container
+            -   1 Dimensi?
+                "hanya dapat mengatur 1 dimensi pada saat tertentu, antara baris atau kolom, tidak bisa keduanya sekaligus"
+        Istilah pada Flexbox 
+        -   main axis : sumbu utama dari sebuah container yang menentukan urutan dari penempatan items secara horizontal 
+        -   main-start | main-end : mulai dan berakhirnya items yang disimpan dalam container
+        -   main-size : ukuran (width/height) dari container yang akan membuat dimensi dari items nya relatif terhadap main-size 
+
+        KETENTUAN PENGGUNAAN :
+         PROPERTY(display). 
+            .container(parent) {
+                display : flex; atau inline-flex;
+            }
+             * membuat sebuah element parent/pembungkus menjadi flexbox, dan membuat element-element didalamnya(items) bisa berperilaku flex juga
+    -->
+    <!-- 
+        Penulisan(properti) dan aturan sintaks :
+        - properti ini diimplementasikan pada dua(2) konten spesifik.
+            1. Parent/Container (elemen pembungkus)
+            2. Child/items (items dari elemen pembungkus)
+        - Sintaks penulisan :
+        .container(element-pembungkus) {
+            1. display: flex | inline-flex;
+            2. flex-direction: row | row-reverse | column | column-reverse;
+            3. flex-wrap: nowrap | wrap | wrap-reverse;
+            4. justify-content: flex-start | flex-end | center | space-between | space-evenly |space-around;
+            5.  align-items: flex-start | flex-end | center | stretch | baseline;
+            6. align-content: flex-start | flex-end | center | stretch | space-between | space-around;
+        }
+        .items(konten-dari-elemen-pembungkus) {
+            1. order: 'number'; *untuk mengubah posisi item sesuai keinginan tanpa harus merubah markup htmlnya
+            2. flex-grow/flex: 'number'; *untuk mempersebar uk. suatu item
+            3. align-self: flex-start| flex-end | stretch; *mengatur perilaku penjajaran sebuah item yang spesifik terhadap cros-axis  .
+        }
+
+    -->
+
+    <!-- CONTOH PENGGUNAAN FLEXBOX -->
+
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+
+</body>
+</html>

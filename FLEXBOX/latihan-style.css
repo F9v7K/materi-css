@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #ddd;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: rgb(21, 20, 30);
+    width: 100vw;
+    height: 90px;
+    color: rgb(205, 201, 253);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+}
+
+nav .text-logo {
+    position: absolute;
+    left: 10em;
+    top: 10px;
+    font-family: "Pacifico", cursive;
+    letter-spacing: 0.5em;
+}
+
+nav .logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+
+}
+
+nav ul {
+    display: flex;
+    width: 30%;
+    list-style-type: none;
+    position: absolute;
+    right: 2em;
+    justify-content: space-between;
+    padding: 0.3em;
+    /* border: 1px solid white; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(205, 201, 253);
+    font-size: 1.3rem;
+    padding: 0.2rem;
+}
+
+nav .toggle {
+    display: none;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav .toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -6px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+nav .toggle span {
+    width: 28px;
+    height: 3px;
+    display: block;
+    background-color: rgb(205, 201, 253);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+/* hamburger meneu animasi  */
+nav .toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+nav .toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+nav .toggle input:checked~span:nth-child(2) {
+    background-color: #fff;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+nav .toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+nav .toggle input:checked~span:nth-child(4) {
+    background-color: #fff;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* Latihan-1 */
+section.one {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0.8rem;
+}
+
+section.one .container {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 0.5em;
+}
+
+section.one .container .items-main,
+section.one .container .items-start,
+section.one .container .items-end {
+    margin: 10px;
+}
+
+section.one .container .items-main {
+    order: 2;
+    flex: 2;
+}
+
+section.one .container .items-main h2 {
+    text-align: center;
+}
+
+section.one .container .items-start {
+    order: 1;
+    flex: 1;
+}
+
+section.one .container .items-end {
+    order: 3;
+    flex: 1;
+}
+
+/* Latihan-2 */
+section.second {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0.8rem;
+}
+
+section.second .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.second .container .items1,
+section.second .container .items2,
+section.second .container .items3 {
+    width: 30%;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+section.second .container .items1 {
+    background-color: lightblue;
+}
+
+section.second .container .items2 {
+    background-color: lightgreen;
+}
+
+section.second .container .items3 {
+    background-color: lightseagreen;
+}
+
+/* Latihan-3 */
+section.third {
+    width: 800px;
+    margin: 50px auto;
+    padding: 0.8em;
+}
+
+section.third .container {
+    display: flex;
+    justify-content: center;
+}
+
+section.third .container .card {
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    margin: 15px;
+    border: 1px solid #999;
+    /* padding-bottom: 0.8rem; */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section.third .container .card .header {
+    background-color: lightgray;
+    height: 150px;
+}
+
+section.third .container .card.xl {
+    transform: scale(1.1);
+}
+
+/* responsive */
+@media screen and (max-width:600px) {
+    section.second .container {
+        flex-direction: column;
+    }
+
+    section.second .container .items1,
+    section.second .container .items2,
+    section.second .container .items3 {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    section.third .container .card {
+        margin: 1.15em;
+    }
+
+}
+
+/* responsive */
+/* ipad */
+@media screen and (max-width:900px) {
+    nav .text-logo {
+        left: 7em;
+        top: 5px;
+    }
+
+    nav .logo img {
+        /* position: inherit; */
+        left: 0;
+        top: 0;
+    }
+
+    nav ul {
+        width: 50%;
+        right: 0;
+    }
+
+    section.third .container {
+        width: 90%;
+        margin-left: 2.5%;
+    }
+}
+
+/* smartphone  */
+@media screen and (max-width:576px) {
+    nav .text-logo {
+        display: none;
+    }
+
+    section.third .container {
+        flex-direction: column;
+        margin-left: 10%;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: rgb(21, 20, 30);
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 0;
+    }
+
+    nav .toggle {
+        display: flex;
+    }
+
+    nav ul.slide {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+}

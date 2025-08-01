@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+</head>
+
+<style>
+
+    /* 
+        float atribut :
+        -none
+        -left
+        -right
+    */
+
+    .container-txtwrapping {
+        width: 600px;
+        border: 1px solid;
+        margin: auto;
+        padding: 3px;
+    }
+
+    .container-txtwrapping h1 {
+        text-align: center;
+    }
+
+    .container-txtwrapping img {
+        width: 50%;
+        height: auto;
+        float: left;
+        margin: 5px;
+        border-radius: 3px;
+    }
+
+    .container-img-galery {
+        width: 600px;
+        border: 1px solid;
+        margin: 30px auto;
+        padding: 3px;
+    }
+
+    .container-img-galery h1 {
+        text-align: center;
+    }
+
+    .container-img-galery .kotak {
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        border: 1px solid;
+        background-color: salmon;
+        line-height: 80px;
+        font-size: 30px;
+        float: right;
+    }
+
+    .container-multi-column {
+        width: 800px;
+        margin: 200px auto;
+        border: 1px solid;
+        
+    }
+
+    .container-multi-column h1 {
+        text-align: center;
+    }
+
+    .container-multi-column .left {
+        width: 150px;
+        height: 500px;
+        background-color: red;
+        float: left;
+    }
+
+    .container-multi-column .center {
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        float: left;
+    }
+
+    .container-multi-column .right {
+        width: 150px;
+        height: 500px;
+        background-color: blue;
+        float: left;
+    }
+
+</style>
+
+<body>
+    
+    <div class="container-txtwrapping">
+        <h1>TEXT WRAPPING</h1>
+        <img src="/web-sederhana/img/hero.png" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, vero reiciendis mollitia in blanditiis, ab animi at fugiat voluptates quaerat reprehenderit nulla neque ea laudantium ipsum minima est vitae explicabo doloremque inventore ipsam debitis ducimus porro non. Deleniti impedit, error fugit laudantium quo nihil. Perspiciatis, dolore vel, quam iste aliquid esse veniam quasi pariatur nihil itaque omnis sit consequatur aperiam inventore sapiente modi labore fugiat, quae ipsa consectetur. Perferendis vel error libero in alias facere quae quisquam esse optio reprehenderit quibusdam minima magnam eligendi dignissimos minus magni, excepturi debitis fugiat et, vero similique sapiente illum tempore? Quis distinctio quidem adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, autem impedit vero mollitia ullam tenetur vel. Ea non asperiores vel ut, nemo veritatis possimus quod vitae fuga, atque nihil, enim accusantium modi commodi quo? A blanditiis soluta tempora nesciunt vero. Exercitationem eaque laudantium perferendis nisi libero placeat hic temporibus tenetur.
+        </p>
+    </div>
+
+    <div class="container-img-galery">
+        <h1>image-galerry</h1>
+        <div class="kotak">1</div>
+        <div class="kotak">2</div>
+        <div class="kotak">3</div>
+        <div class="kotak">4</div>
+        <div class="kotak">5</div>
+        <div class="kotak">6</div>
+        <div class="kotak">7</div>
+        <div class="kotak">8</div>
+        <div class="kotak">9</div>
+        <div class="kotak">10</div>
+    </div>
+
+    <div class="container-multi-column">
+        <h1>multi column</h1>
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>

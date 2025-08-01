@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION</title>
+
+    <style>
+        .container {
+            width: 600px;
+            border: 1px solid;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .kotak1 {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+        }
+
+        .kotak2 {
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+            position: relative;
+            top: 30px;
+            left: 60px;
+        }
+
+        .kotak3 {
+            width: 200px;
+            background-color: yellow;
+            height: 200px;
+        }
+
+        .container2 {
+            width: 600px;
+            margin: 20px auto;
+            border: 1px solid;
+            box-sizing: border-box;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .bulat1 {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 5px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+        .bulat2 {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 5px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        .bulat3 {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            border-radius: 50%;
+        }
+
+        .container3 {
+            width: 600px;
+            border: 1px solid; 
+            margin: 20px auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            align-items: center;
+        }
+
+        .rectangle1 {
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 25%;
+        }
+
+        .rectangle2 {
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            text-align: center;
+            background-color: blueviolet;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .rectangle3 {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            border-radius: 25%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>POSITION:RELATIVE</h1>
+    <div class="container">
+        <div class="kotak1"></div>
+        <div class="kotak2"></div>
+        <div class="kotak3"></div>
+    </div>
+
+    <h1>POSITION:ABSOLUT</h1>
+    <div class="container2">
+        <div class="bulat1"></div>
+        <div class="bulat2"></div>
+        <div class="bulat3"></div>
+    </div>
+
+    <h1>POSITION:FIXED</h1>
+    <div class="container3">
+        <div class="rectangle1"></div>
+        <div class="rectangle2">ini contoh posisi fixed, bisa dijadikan properti pada navbar</div>
+        <div class="rectangle3"></div>
+    </div>
+
+</body>
+</html>

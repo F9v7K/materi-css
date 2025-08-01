@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan -bab(position)</title>
+</head>
+
+    <style>
+        body {
+            height: 1000px;
+        }
+
+        .container {
+            width: 450px;
+            height: 450px;
+            border: 3px solid #333;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .kotak1, .kotak2, .kotak3 {
+            margin: auto;
+            position: absolute;
+        }
+
+        .kotak1 {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            z-index: 1;
+        }
+
+        .kotak2 {
+            width: 150px;
+            height: 150px;
+            background-color: magenta;
+            top: 75px;
+            left: 75px;
+            z-index: 2;
+        }    
+
+        .kotak3 {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            top: 150px;
+            left: 150px;
+            z-index: 3;
+        }
+
+        .top-bar {
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: darkblue;
+            z-index: 9999;
+        }
+
+        .iklan {
+            background-color: rgba(0,0,0,0.6);
+            position: fixed;
+            top: 100px;
+            bottom: 100px;
+            left: 100px;
+            right:100px;
+            z-index: 9999;
+        }
+
+        .close {
+            width: 30px;
+            height: 30px;
+            background-color: #eaeaea;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 3px solid #333;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            border-radius: 50%;
+        }
+
+    </style>
+
+<body>
+    <div class="top-bar"></div>
+    
+    <div class="container">
+        <div class="kotak1"></div>
+        <div class="kotak2"></div>
+        <div class="kotak3"></div>
+    </div>
+
+    <div class="iklan">
+        <div class="close">X</div>
+    </div>
+
+</body>
+</html>

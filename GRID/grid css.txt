@@ -1,0 +1,67 @@
+[PARENT / CONTAINER]
+ 
+ - grid-template-columns
+ - grid-template-rows
+	: grid-template-columns & 
+	  grid-template-rows -> mendefinisikan kolom/baris dengan cara nilai dipisahkan spasi. Nilai merepresentasikan ukuran grid track dan spasi merupakan grid line.
+
+
+ - grid-auto-column
+ - grid-auto-rows
+	: grid-auto-column &
+	  grid-auto-rows -> mengatur ukuran grid track yang dituliskan pada grid template (implicit track).
+
+ - grid-auto-flow
+	: untuk mengatur penempatan item / cell pada grid track, termasuk yang ditulis secara implicit
+
+   -special function dan keywords
+	1. repeat() , menentukan ukuran grid track secara berulang. 
+		.container {
+			display: grid;
+			grid-template-columns: repeat(9, 1fr);
+		}
+
+	2. min-content & max-content , menentukan seberapa besar ukuran grid track berdasarkan content pada sebuah item.
+		.container {
+			display: grid;
+			grid-template-columns: 1fr min-content 1fr;
+		}				   max-content
+
+	3. auto-fill & auto-fit , menentukan jumlah item untuk berada pada grid track.
+		.container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, 200px);
+		}				      auto-fill 
+
+	4. minmax() , menentukan ukuran minimal dan maksimal dari grid track
+		.container {
+			display: grid;
+			grid-template-columns: minmax(200px, 300px);
+		}		
+
+
+ - grid-template-areas
+ - grid-template
+ - grid-column-gap
+ - grid-row-gap
+ - grid-gap
+ - grid
+
+ - justify-items
+ - align-items
+ - place-items
+ - justify-content
+ - align-content
+ - place-content
+
+[ITEMS / CHILD]
+- grid-column-start
+- gird-column-end
+- grid-row-start
+- grid-row-end
+- grid-column
+- grid-row
+- grid-area
+- justify-self
+- align-self
+- place-self

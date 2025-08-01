@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation CSS</title>
+    <style>
+        .container {
+            width: 900px;
+            height: auto;
+            margin: 30px auto;
+            border: 5px dotted rgb(44, 20, 17);
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+        .kotak {
+            width: 200px;   
+            height: 50px;
+            line-height: 50px;
+            background-color: lightgreen;
+           animation: boxAnimation 2.5s ease 0.3s alternate forwards;
+        }
+
+        /* 
+         * ANIMATION 
+         */
+        @keyframes boxAnimation {
+            25% {
+                width: 25%;
+                height: 50px;
+                line-height: 50px;
+                font-size: 15px;
+            }
+
+            50% {
+                width: 50%;
+                height: 150px;
+                line-height: 150px;
+                font-size: 25px;
+                text-transform: lowercase;
+            }
+
+            75% {
+                width: 75%;
+                height: 250px;
+                line-height: 250px;
+                font-size: 35px;
+                text-transform: capitalize;
+            }
+
+            100% {
+                width: 100%;
+                height: 350px;
+                line-height: 350px;
+                font-size: 45px;
+                text-transform: uppercase;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ANIMATION :
+        [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state] 
+    -->
+    <div class="container">
+        <div class="kotak">animation</div>
+    </div>
+</body>
+</html>

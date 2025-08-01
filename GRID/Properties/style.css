@@ -1,0 +1,37 @@
+/* 
+ * PROPERTIES GRID
+*/
+/* CONTAINER/PARENT */
+/* 
+    - grid-template-colums
+    - grid-template-rows
+    - grid-auto-column
+    - grid-auto-rows
+    - grid-auto-flow
+    - grid-template-areas
+    - grid-template
+    - grid-column-gap
+    - grid-row-gap
+    - grid-gap
+    - grid
+    - justify-items
+    - align-items
+    - place-items
+    - justify-content
+    - align-content
+    - place-content
+*/
+
+/* ITEMS/CHILD */
+/* 
+    - grid-column-start
+    - gird-column-end
+    - grid-row-start
+    - grid-row-end
+    - grid-column
+    - grid-row
+    - grid-area
+    - justify-self
+    - align-self
+    - place-self
+*/

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properti | GRID</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .border {
+            width: 800px;
+            padding: 2em;
+            margin: 50px auto;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .container {
+            width: 60%;
+            display: grid;
+            margin: auto;
+            grid-template-columns: 1fr 2fr 3.5fr;
+            grid-template-rows: 2fr 5fr 3fr;
+        }
+
+        .item {
+            background-color: rgb(68, 167, 230);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item:nth-child(even) {
+            background-color: rgb(234, 72, 86);
+        }
+
+        .desk {
+            margin: auto;
+            width: 60%;
+        }
+
+        .desk p {
+            font-size: 1.10rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .container-2 {
+            /* width: 60%; */
+            text-align: center;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-areas: "atas atas"
+                "kiri1 kanan"
+                "kiri2 kanan"
+                "bawah bawah";
+            grid-template-columns: 1fr 1.8fr;
+            grid-template-rows: 1fr 1fr 1.3fr;
+        }
+
+        .item1 {
+            background-color: green;
+            grid-area: atas;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item2 {
+            background-color: blue;
+            grid-area: kiri1;
+            padding: 60px 0;
+        }
+
+        .item3 {
+            background-color: red;
+            grid-area: kiri2;
+            padding: 100px 0;
+        }
+
+        .item4 {
+            background-color: yellow;
+            grid-area: kanan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item5 {
+            background-color: purple;
+            grid-area: bawah;
+            padding: 1.5em;
+        }
+    </style>
+
+</head>
+<!-- 
+    $ grid-template-columns & grid-template-rows 
+        "mendefinisikan kolom / baris dengan cara menuliskan nilai dipisahkan oleh spasi. Nilai merepresentasikan ukuran *grid track* dan spasi merepresentasikan *grid line*"
+    
+      $ <track-size> : bisa berupa px, %, auto, atau fr(fraction)
+      $ <line-name> : nama yang bisa diberikan pada track  
+-->
+
+<body>
+
+    <div class="border">
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+        </div>
+        <div class="desk">
+            <p>diatas merupakan contoh penggunaan :
+            <pre>.container { 
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 3.5fr;
+                    grid-template-rows: 2fr 5fr 3fr;
+                }
+                </pre>
+            </p>
+        </div>
+    </div>
+
+    <div class="border">
+        <div class="container-2">
+            <div class="item1">1(ATAS)</div>
+            <div class="item2">2(KIRI-1)</div>
+            <div class="item3">3(KIRI-2)</div>
+            <div class="item4">4(KANAN)</div>
+            <div class="item5">5(BAWAH)</div>
+        </div>
+        <div class="desk">
+            <p>diatas merupakan contoh penggunan :
+            <pre>
+                    .container {
+                        display: grid;
+                        grid-template-areas:"atas atas"
+                                            "kiri1 kanan"
+                                            "kiri2 kanan"
+                                            "bawah bawah";
+                        grid-template-columns: 1fr 1.8fr;
+                        grid-template-rows: 1fr 1fr 1.3fr;
+                    }
+                    .item1 {
+                            background-color: green;
+                            grid-area: atas;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                    }
+
+                        .item2 {
+                            background-color: blue;
+                            grid-area: kiri1;
+                            padding: 60px 0;
+                    }
+
+                        .item3 {
+                            background-color: red;
+                            grid-area: kiri2;
+                            padding: 100px 0;
+                    }
+
+                        .item4 {
+                            background-color: yellow;
+                            grid-area: kanan;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                    }
+
+                        .item5 {
+                            background-color: purple;
+                            grid-area: bawah;
+                            padding: 1.5em;
+                    }
+                </pre>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

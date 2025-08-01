@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSITION</title>
+
+        <style>
+
+        .container {
+            width: 800px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 50px auto;
+        }
+
+        .kotak1, .kotak2, .kotak3, .kotak4, .kotak5, .kotak6 {
+            width: 70px;
+            height: 65px;
+            background-color: salmon;
+            margin: 10px;
+            text-align: center;
+            line-height: 65px;
+        }
+
+        .kotak1 { transition: all 1.8s ease; }
+        .kotak2 { transition: all 1.8s ease-in; }
+        .kotak3 { transition: all 1.8s ease-in-out; }
+        .kotak4 { transition: all 1.8s ease-out; }
+        .kotak5 { transition: all 1.8s step-end; }
+        .kotak6 { transition: all 1.8s cubic-bezier(0,-0.49, 1, 1.55); }
+
+        .container:hover .kotak1,
+        .container:hover .kotak2,
+        .container:hover .kotak3,
+        .container:hover .kotak4,
+        .container:hover .kotak5,
+        .container:hover .kotak6 {
+            transform: rotate(360deg);
+            background-color: blue;
+            margin-left: 700px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="kotak1">ease</div>
+        <div class="kotak2">ease-in</div>
+        <div class="kotak3">ease-in-out</div>
+        <div class="kotak4">ease-out</div>
+        <div class="kotak5">stop-end</div>
+        <div class="kotak6">c-bezier</div>
+    </div>
+
+</body>
+</html>
